@@ -12,10 +12,10 @@ const bot = linebot({
 // event 為我收到的訊息
 bot.on('message', event => {
   // 如果我收到的訊息是 sky
-  if (event.message.type === 'text' && event.message.text === 'latest news') {
+  if (event.message.type === 'text' && event.message.text.trim() === 'latest news') {
     // 則執行 sky(event)
     latestNews(event)
-  } else if (event.message.type === 'text' && event.message.text === 'top four news') {
+  } else if (event.message.type === 'text' && event.message.text.trim() === 'top four news') {
     topFourNews(event)
   }
 })
