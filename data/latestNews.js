@@ -4,7 +4,7 @@ import axios from 'axios'
 // 要對 html 的網頁發請求所以
 import * as cheerio from 'cheerio'
 // 會用到模板所以
-import template from '../templates/latest.js'
+import template from '../templates/latestNews.js'
 // 物件複製
 import writeJSON from '../utils/writeJSON.js'
 
