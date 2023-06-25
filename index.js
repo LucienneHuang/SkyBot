@@ -18,10 +18,6 @@ bot.on('message', event => {
     // 則執行 sky(event)
     latestNews(event)
   }
-  if (event.message.type === 'text' && event.message.text === 'top four news') {
-    // 則執行 sky(event)
-    topFourNews(event)
-  }
 })
 bot.listen('/', process.env.PORT || 3000, () => {
   console.log('哈囉')
