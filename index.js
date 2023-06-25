@@ -2,7 +2,6 @@
 import 'dotenv/config'
 import linebot from 'linebot'
 import latestNews from './data/latestNews.js'
-import topFourNews from './data/topFourNews.js'
 import { scheduleJob } from 'node-schedule'
 scheduleJob('0 0 * * *', latestNews.update)
 latestNews.update()
