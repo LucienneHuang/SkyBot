@@ -16,8 +16,7 @@
     "axios": "^1.4.0",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.1.4",
-    "linebot": "^1.6.1",
-    "node-schedule": "^2.1.1"
+    "linebot": "^1.6.1"
   },
   "devDependencies": {
     "eslint": "^8.42.0",
