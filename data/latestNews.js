@@ -21,7 +21,7 @@ export default async (event) => {
     const bubble = JSON.parse(JSON.stringify(template))
     bubble.body.contents[0].url = 'https:' + $('.article-image img').attr('src')
     bubble.body.contents[1].contents[0].contents[1].contents[0].text = $('.article-content .article-title').eq(0).text()
-    bubble.body.contents[1].contents[0].contents[2].contents[0].contents[1].text = $('.article-content p.article-date').eq(0).text().slice(0, 11)
+    bubble.body.contents[1].contents[0].contents[2].contents[0].contents[1].text = $('.article-content p.article-date').eq(0).text().slice(0, 10)
     bubble.body.contents[1].contents[0].contents[3].contents[0].action.uri = 'https://www.thatskygame.com' + $('.article a').eq(0).attr('href')
 
     writeJSON(bubble, 'latestNews')

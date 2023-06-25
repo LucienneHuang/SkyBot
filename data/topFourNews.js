@@ -17,7 +17,7 @@ export default async (event) => {
       // 深層複製一個物件出來
       bubble.contents[i].hero.url = 'https:' + $('.article-image img').eq(i).attr('src')
       bubble.contents[i].body.contents[0].text = $('.article-content .article-title').eq(i).text()
-      bubble.contents[i].body.contents[1].contents[0].text = $('.article-content p.article-date').eq(i).text().slice(0, 11)
+      bubble.contents[i].body.contents[1].contents[0].text = $('.article-content p.article-date').eq(i).text().slice(0, 10)
       bubble.contents[i].body.contents[2].action.uri = 'https://www.thatskygame.com' + $('.article a').eq(i).attr('href')
     }
     writeJSON(bubble, 'topFourNews')
