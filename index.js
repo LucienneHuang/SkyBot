@@ -2,6 +2,7 @@
 import 'dotenv/config'
 import linebot from 'linebot'
 import latestNews from './data/latestNews.js'
+import topFourNews from './data/topFourNews.js'
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
   channelSecret: process.env.CHANNEL_SECRET,
@@ -14,6 +15,8 @@ bot.on('message', event => {
   if (event.message.type === 'text' && event.message.text === 'latest news') {
     // 則執行 sky(event)
     latestNews(event)
+  } else if (event.message.type === 'text' && event.message.text === 'top four news') {
+    topFourNews(event)
   }
 })
 bot.listen('/', process.env.PORT || 3000, () => {
